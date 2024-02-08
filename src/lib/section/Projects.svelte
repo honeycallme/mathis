@@ -32,7 +32,7 @@
 
 <main class="my-[20dvh] main" id="projects">
    <div class="relative gallery">
-      <p class="text-3xl">Featured Work</p>
+      <p class="p-2 font-serif text-3xl italic text-right">Featured Work</p>
       {#each projects as project, i}
          <Project {project} />
       {/each}

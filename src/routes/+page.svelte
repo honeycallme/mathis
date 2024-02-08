@@ -5,6 +5,7 @@
    import Projects from "$lib/section/Projects.svelte";
    import Landing from "$lib/section/Landing.svelte";
    import Welcome from "$lib/section/Welcome.svelte";
+   import Parallax from "$lib/section/Parallax.svelte";
 
    onMount(() => {
       scroll(animate(".progress", { scaleX: [0, 0.9] }));
@@ -22,6 +23,7 @@
 
    <Landing />
    <Welcome />
+   <Parallax />
    <Projects />
 
    <div style="height: 300vh;"></div>

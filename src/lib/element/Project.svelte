@@ -1,7 +1,13 @@
-<script>
+<script lang="ts">
    import { Motion } from "svelte-motion";
 
-   export let project = {};
+   interface Project {
+      title1: string;
+      src: string;
+      title2: string;
+   }
+
+   export let project: Project;
    let active = false;
 
    const anim = {
@@ -19,6 +25,8 @@
    on:mouseenter={() => (active = true)}
    on:mouseleave={() => (active = false)}
    data-scroll
+   role="button"
+   tabindex="0"
 >
    <p>{project.title1}</p>
 
