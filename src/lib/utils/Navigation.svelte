@@ -23,7 +23,7 @@
 
    function goTo(target : string) {
       const params = {
-         duration: 5
+         duration: 10
       };
       const element = document.getElementById(target);
       if (!element) return;
