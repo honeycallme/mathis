@@ -27,6 +27,10 @@
    });
 </script>
 
+<svelte:head>
+    <title>mathis's world 🫖</title> 
+</svelte:head>
+
 <main class="bg-[url('/images/backgrounds/white.jpg')]">
    {#if loading}
       <Loader />
