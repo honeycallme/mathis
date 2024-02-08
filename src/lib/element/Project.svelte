@@ -19,13 +19,12 @@
    on:mouseenter={() => (active = true)}
    on:mouseleave={() => (active = false)}
    data-scroll
-   data-croll-speed="0.3"
 >
    <p>{project.title1}</p>
 
    <Motion variants={anim} animate={active ? "visible" : "hidden"} let:motion>
       <div class="containerImage" use:motion>
-         <img src={ `/images/projects/${project.src}`} alt="not found" />
+         <img src={`/images/projects/${project.src}`} alt="not found" />
       </div>
    </Motion>
 
@@ -55,7 +54,7 @@
 
    .project p {
       font-size: 5vw;
-      font-family: 'Adieu', sans-serif;
+      font-family: "Adieu", sans-serif;
       margin: 0px;
    }
    .project p:nth-of-type(1) {
