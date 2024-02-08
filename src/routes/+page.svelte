@@ -7,6 +7,22 @@
    import Welcome from "$lib/section/Welcome.svelte";
    import Parallax from "$lib/section/Parallax.svelte";
 
+   let marginValue = 0;
+   
+   function calculateMargin() {
+      const screenWidth = window.innerWidth;
+      const standardScreenWidth = 1920; // Width of a standard 1080p monitor
+      const increment = 0.7; // Increment value for each extra 10 pixels
+
+      const extraPixels = screenWidth - standardScreenWidth;
+      const extraMargin = Math.floor(extraPixels / 10) * increment;
+      marginValue = -60 - extraMargin;
+
+      console.log(marginValue);
+
+      return marginValue;
+   }
+
    onMount(() => {
       scroll(animate(".progress", { scaleX: [0, 0.9] }));
    });
@@ -17,7 +33,8 @@
       <img
          alt="arrow"
          src="/images/transitions/arrow.png"
-         class="absolute z-10 px-8 drop-shadow-2xl -mt-[80vh]"
+         class="absolute z-10 px-8 drop-shadow-2xl"
+         style={`margin-top: ${calculateMargin()}dvh;`}
       />
    </div>
 

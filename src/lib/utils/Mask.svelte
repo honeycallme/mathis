@@ -41,7 +41,7 @@
          </div>
       </Motion>
 
-      <p>
+      <p class="text-white">
          I'm a <span>selectively skilled</span> product designer with strong focus
          on producing high quality & impactful digital experience.
       </p>
@@ -79,6 +79,6 @@
       mask-size: 40px;
       background: #ec4e39;
       position: absolute;
-      color: white;
+      color: black;
    }
 </style>

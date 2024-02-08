@@ -18,7 +18,7 @@
    });
 </script>
 
-<main class="bg-black content">
+<main class="-mt-[10dvh] bg-black content">
    <div
       class="w-full h-full bg-[url('/images/backgrounds/plastic.png')] bg-fixed"
    >

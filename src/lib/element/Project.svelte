@@ -28,7 +28,7 @@
    role="button"
    tabindex="0"
 >
-   <p>{project.title1}</p>
+   <p class:text-error={active}>{project.title1}</p>
 
    <Motion variants={anim} animate={active ? "visible" : "hidden"} let:motion>
       <div class="containerImage" use:motion>
@@ -36,7 +36,7 @@
       </div>
    </Motion>
 
-   <p>{project.title2}</p>
+   <p class:text-error={active}>{project.title2}</p>
 </div>
 
 <style>
