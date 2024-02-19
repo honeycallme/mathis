@@ -25,7 +25,7 @@ export default function initializeScroll(id : string, {
             return;
         }
 
-        wrapperElement = wrapper;
+        wrapperElement = document.getElementById(wrapper);
     }
 
     const contentElement = wrapperElement.firstChild;
