@@ -1,29 +1,32 @@
 <script lang="ts">
-	import LocomotiveScroll from 'locomotive-scroll';
+   import type LocomotiveScroll from "locomotive-scroll";
    import { onMount } from "svelte";
-   import { getStore } from "$lib/stores";
+   import { getStore } from "$lib/stores/stores";
+   import { goto } from "$app/navigation";
 
    let showNav = false;
    let chosen = "en";
 
-   let locomotive : LocomotiveScroll = null;
+   let locomotive: LocomotiveScroll = null;
    const locomotiveStore = getStore("window-scroll");
 
    onMount(() => {
-      const unsubscribe = locomotiveStore.subscribe(($locomotive : LocomotiveScroll) => {
-         locomotive = $locomotive;
-      });
+      const unsubscribe = locomotiveStore.subscribe(
+         ($locomotive: LocomotiveScroll) => {
+            locomotive = $locomotive;
+         },
+      );
 
-      return unsubscribe; 
+      return unsubscribe;
    });
 
    function goHome() {
-      // implementation
+      goto("/");
    }
 
-   function goTo(target : string) {
+   function goTo(target: string) {
       const params = {
-         duration: 10
+         duration: 10,
       };
       const element = document.getElementById(target);
       if (!element) return;
@@ -31,7 +34,7 @@
       locomotive.scrollTo(element, params);
    }
 
-   function setLang(lang : string) {
+   function setLang(lang: string) {
       chosen = lang;
    }
 </script>
@@ -43,7 +46,7 @@
             class="mr-4 btn btn-square btn-ghost"
             on:click={() => (showNav = !showNav)}
          >
-            <img src="/images/utils/cat.png" alt="cat" />
+            <img src="/images/utils/avatar.png" alt="cat" />
          </button>
       </div>
    {:else}
@@ -92,7 +95,7 @@
                   class="mr-4 btn btn-square btn-ghost"
                   on:click={() => (showNav = !showNav)}
                >
-                  <img src="/images/utils/cat.png" alt="cat" />
+                  <img src="/images/utils/avatar.png" alt="cat" />
                </button>
             </div>
          </div>

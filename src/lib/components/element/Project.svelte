@@ -1,14 +1,12 @@
 <script lang="ts">
    import { Motion } from "svelte-motion";
+   import { splitString } from "$lib/utils/utils";
+   import { DownloadUrl } from "sveltepocket";
 
-   interface Project {
-      title1: string;
-      src: string;
-      title2: string;
-   }
-
-   export let project: Project;
+   export let project : any;
    let active = false;
+
+   [project.title1, project.title2] = splitString(project.title);
 
    const anim = {
       initial: { width: 0 },
@@ -32,7 +30,11 @@
 
    <Motion variants={anim} animate={active ? "visible" : "hidden"} let:motion>
       <div class="containerImage" use:motion>
-         <img src={`/images/projects/${project.src}`} alt="not found" />
+
+         <DownloadUrl record={project} file={project.cover} let:link>
+            <img src={link} alt="not found" />
+         </DownloadUrl>
+
       </div>
    </Motion>
 
