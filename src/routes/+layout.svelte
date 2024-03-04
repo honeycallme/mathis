@@ -1,14 +1,17 @@
 <script lang="ts">
-   import Loader from "$lib/components/utils/Loader.svelte";
+   import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
    import type LocomotiveScroll from "locomotive-scroll";
    import { onMount, onDestroy } from "svelte";
    import { blur } from "svelte/transition";
    import { App } from 'sveltepocket';
-
+   
+   import Loader from "$lib/components/utils/Loader.svelte";
    import Navigation from "$lib/components/utils/Navigation.svelte";
    import { getStore } from "$lib/stores/stores";
    import initializeScroll from "$lib/stores/scroll";
    import "../app.css";
+
+   injectSpeedInsights();
 
    const id = "window-scroll";
    let locomotive: LocomotiveScroll = null;

@@ -26,6 +26,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@vercel/speed-insights": "^1.0.10",
     "bits-ui": "^0.18.4",
     "clsx": "^2.1.0",
     "gsap": "^3.12.5",
