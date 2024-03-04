@@ -46,7 +46,7 @@
 </App>
 
 
-<div class="fixed inset-0 z-20 pointer-events-none">
+<div class="fixed inset-0 z-[9999999] pointer-events-none">
    <img
       src="/images/utils/frame.png"
       alt="frame"
