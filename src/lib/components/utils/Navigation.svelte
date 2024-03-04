@@ -26,7 +26,7 @@
 
    function goTo(target: string) {
       const params = {
-         duration: 10,
+         duration: 5,
       };
       const element = document.getElementById(target);
       if (!element) return;

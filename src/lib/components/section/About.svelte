@@ -2,7 +2,7 @@
    import Mask from "$lib/components/utils/Mask.svelte";
 </script>
 
-<main class="h-[70dvh] w-full bg-black">
+<main class="h-[70dvh] w-full bg-black" id="about">
    <div
       class="w-full h-full bg-[url('/images/backgrounds/plastic.png')] bg-fixed"
    >

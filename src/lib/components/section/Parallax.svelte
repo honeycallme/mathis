@@ -13,7 +13,7 @@
 
    onMount(() => {
       scroll(animate(".el", { scale: [1, 10] }), {
-         offset: ["20% start", "end end"],
+         offset: ["8% start", "end end"],
       });
    });
 </script>
