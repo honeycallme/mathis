@@ -14,14 +14,14 @@
        let slides = gsap.utils.toArray(".slide");
  
        gsap.to(slides, {
-          xPercent: -100 * (slides.length - 1),
+          xPercent: -100 * (slides.length - 1.5),
           ease: "none",
           scrollTrigger: {
              trigger: ".contain",
              pin: true,
              scrub: 1,
              snap: 1 / (slides.length - 1),
-             end: () => "+=" + (slider.offsetWidth + 1000),
+             end: () => "+=" + (slider.offsetWidth * 2),
              onUpdate: (self) => {
                 current = Math.round(self.progress * (slides.length - 1)) + 1;
                 marker.style.left = `${self.progress * 100}vw`;
@@ -33,11 +33,6 @@
  
 
 <main class="w-full h-full min-h-[100dvh] contain" bind:this={slider}>
-   <div class="text-black special lead">
-      <span>mathis</span>
-      <span>one design at a time</span>
-   </div>
-
    <div class="marker-wrapper" bind:this={marker}>
       <div class="marker">
          <span class="grab"></span>
@@ -58,14 +53,14 @@
       </div>
    </div>
 
-   <div class="footer special">
+   <div class="footer">
       <span>Mathis web designs</span>
       <span>mathis { new Date().getFullYear() } &copy;</span>
    </div>
 </main>
 
 <style>
-   .special {
+   .footer {
       position: fixed;
       widows: 100%;
       display: flex;
@@ -75,16 +70,7 @@
       text-transform: uppercase;
       color: black;
       opacity: 0.5;
-   }
-
-   .footer {
       bottom: 0;
-   }
-
-   .lead {
-      top: 0;
-      left: 0;
-      gap: 20px;
    }
 
    .contain {
@@ -109,8 +95,8 @@
    }
 
    .slide {
-      width: 600px;
-      height: 600px;
+      width: 60dvh;
+      height: 60dvh;
       background: gray;
    }
 
