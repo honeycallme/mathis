@@ -10,12 +10,14 @@
    import { getStore } from "$lib/stores/stores";
    import initializeScroll from "$lib/stores/scroll";
    import "../app.css";
+   import Contact from '$lib/components/section/Contact.svelte';
 
    injectSpeedInsights();
 
    const id = "window-scroll";
    let locomotive: LocomotiveScroll = null;
    let loading: boolean = true;
+   let size : number = 0;
 
    onMount(() => {
       const store = getStore(id, initializeScroll(id, { duration: 5.2 }));
@@ -35,24 +37,35 @@
    <title>mathis's world 🫖</title>
 </svelte:head>
 
+<svelte:window bind:innerWidth={size} />
+
 <App url={'https://mathis.pockethost.io'}>
    <main class="bg-[url('/images/backgrounds/white.jpg')]">
       {#if loading}
          <Loader />
       {:else}
-         <div transition:blur={{ duration: 800, amount: 10 }}>
-            <Navigation />
-            <slot />
-         </div>
+
+         {#if size > 768}
+            <div transition:blur={{ duration: 800, amount: 10 }}>
+               <Navigation />
+               <slot />
+            </div>
+         {:else}
+            <Contact />
+         {/if}
+
       {/if}
    </main>
 </App>
 
 
-<div class="fixed inset-0 z-[9999999] pointer-events-none">
-   <img
-      src="/images/utils/frame.png"
-      alt="frame"
-      class="left-0 right-0 w-full h-full"
-   />
-</div>
+{#if size > 768}
+   <div class="fixed inset-0 z-[9999999] pointer-events-none">
+      <img
+         src="/images/utils/frame.png"
+         alt="frame"
+         class="left-0 right-0 w-full h-full"
+      />
+   </div>
+{/if}
+

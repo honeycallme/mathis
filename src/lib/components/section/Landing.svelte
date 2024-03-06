@@ -1,3 +1,6 @@
+<script lang="ts">
+</script>
+
 <main class="relative bg-purple-200 main">
    <img
       src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F78.media.tumblr.com%2F50d43db43843a7dc2fbb93c660a1d0dc%2Ftumblr_ozar2dfRQI1rh3rypo1_1280.gif&f=1&nofb=1&ipt=4fc71b0b7a05822ead71374f474d2bf91bb1a30b8b24db40f978ee425e416c95&ipo=images"
@@ -6,24 +9,32 @@
    />
 
    <div class="z-50 center" data-scroll data-scroll-speed="0.3">
-      <p
-         class="relative z-10 p-4 font-bold text-center text-error text-9xl"
-         style="font-size: 22rem; font-family: 'Adieu', sans-serif;  mix-blend-mode: difference;"
+      <h1
+         class="relative z-10 p-4 font-bold text-center text-error"
+         style="font-family: 'Adieu', sans-serif;  mix-blend-mode: difference;"
       >
          mathis.
-      </p>
+      </h1>
 
       <div class="z-50 arrow">
          <span></span>
          <span></span>
       </div>
 
-      <img src="/images/utils/pixeldme.png" class="background-image" alt="me" />
+      <img
+         src="/images/utils/pixeldme.png"
+         class="background-image h-[120%]"
+         alt="me"
+      />
    </div>
 </main>
 
 <style>
    @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@700&display=swap");
+
+   h1 {
+      font-size: 20rem; /* for large screens */
+   }
 
    .main {
       height: 100vh;
@@ -32,8 +43,7 @@
 
    .background-image {
       position: absolute;
-      width: 100%; /* Adjust the width as per your preference */
-      height: 110%; /* Automatically adjust the height to maintain aspect ratio */
+      width: 100%;
       object-fit: cover;
       z-index: 0;
       top: 0;

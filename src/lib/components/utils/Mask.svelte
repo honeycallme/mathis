@@ -35,8 +35,8 @@
                on:mouseenter={() => (hovered = true)}
                on:mouseleave={() => (hovered = false)}
             >
-            A visual designer - with skills that haven't been replaced by A.I
-            (yet) - making good shit only if the paycheck is equally good.
+            A freelance web developper with skills that haven't been replaced by A.I
+            (yet) making the best web app's possible in a multitude of different languages.
          </p>
          
          <img src="/images/utils/avatar.png" alt="" class="z-50 w-16 mt-4" />
@@ -45,8 +45,8 @@
    
       <span class="text-2xl text-center text-white">(hover me)</span>
       <p class="text-white">
-         I'm a <span class="highlight">selectively skilled</span> product designer with strong focus
-         on producing high quality & impactful digital experience.
+         I'm a <span class="highlight">very curious</span> computer science student with strong focus
+         on learning new technologies and creating new and exciting projects. 
       </p>
 
       <img src="/images/utils/avatar.png" alt="" class="z-50 w-16 mt-4" />

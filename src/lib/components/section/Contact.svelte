@@ -11,16 +11,16 @@
    <div class="flex-col w-full h-full center pt-[15%]">
       <div class="flex flex-col w-11/12">
          <div class="">
-            <h1 class="px-4 font-bold text-7xl adieu">Contact</h1>
+            <h1 class="px-4 text-5xl font-bold md:text-7xl adieu">Contact</h1>
          </div>
 
          <!-- separator -->
          <div class="divider divider-neutral"></div>
 
-         <div class="flex px-4">
-            <div class="flex items-start flex-grow gap-8 text-xl">
+         <div class="flex flex-col gap-8 px-4 md:flex-row md:gap-0">
+            <div class="flex items-start flex-grow gap-8 md:text-xl">
                <div>
-                  <h2 class="text-3xl adieu">Email</h2>
+                  <h2 class="text-2xl md:text-3xl adieu">Email</h2>
                </div>
 
                <div>
@@ -30,9 +30,9 @@
                </div>
             </div>
 
-            <div class="flex items-start flex-grow gap-8 text-xl">
+            <div class="flex items-start flex-grow gap-8 md:text-xl">
                <div>
-                  <h2 class="text-3xl adieu">Socials</h2>
+                  <h2 class="text-2xl md:text-3xl adieu">Socials</h2>
                </div>
 
                <div class="flex flex-col">

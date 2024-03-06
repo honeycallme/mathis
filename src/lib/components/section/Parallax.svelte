@@ -23,11 +23,10 @@
       class="w-full h-full bg-[url('/images/backgrounds/plastic.png')] bg-fixed"
    >
       <div class="glued">
-         <p
-            class="relative z-50 text-center text-lg text-error top-[50%] el italic"
-         >
-            ui and graphic product designer.
+         <p class="relative z-50 text-center text-lg text-error top-[50%] el italic">
+            i also design web apps such as this one !
          </p>
+
          {#each pictures as { src }, index}
             <div class="el" style="z-index: {index === 0 ? 1 : 0}">
                <div class="imageContainer">
