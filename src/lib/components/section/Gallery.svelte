@@ -34,7 +34,7 @@
 
 <main class="w-full h-full min-h-[100dvh] contain" bind:this={slider}>
    <div class="marker-wrapper" bind:this={marker}>
-      <div class="marker">
+      <div class="marker after:glass">
          <span class="grab"></span>
       </div>
       <span class="active-slide">{current}/{data.length}</span>
@@ -129,7 +129,6 @@
       left: -20px;
       width: 40px;
       height: 40px;
-      background: whitesmoke;
       border: 2px solid black;
       border-radius: 100%;
    }

@@ -5,7 +5,6 @@
    import { goto } from "$app/navigation";
 
    let showNav = false;
-   let chosen = "en";
 
    let locomotive: LocomotiveScroll = null;
    const locomotiveStore = getStore("window-scroll");
@@ -34,9 +33,6 @@
       locomotive.scrollTo(element, params);
    }
 
-   function setLang(lang: string) {
-      chosen = lang;
-   }
 </script>
 
 <div class="relative z-[100]" style="font-family: 'Adieu', sans-serif;">
@@ -65,31 +61,11 @@
                />
             </button>
 
-            <div class="navbar-center">
+            <div class="flex items-center justify-center lg:navbar-end">
                <ul class="px-1 text-lg italic text-error menu menu-horizontal">
-                  <li><a on:click={() => goTo("about")}>About Me</a></li>
-                  <li><a on:click={() => goTo("projects")}>Portfolio</a></li>
+                  <li><a on:click={() => goTo("projects")}>Projects</a></li>
                   <li><a on:click={() => goTo("contact")}>Contact</a></li>
                </ul>
-            </div>
-
-            <div class="flex items-center justify-center lg:navbar-end">
-               <div class="dropdown dropdown-hover">
-                  <div tabindex="0" role="button" class="btn btn-ghost">
-                     {#if chosen == "en"}
-                        🇺🇸
-                     {:else if chosen == "fr"}
-                        🇫🇷
-                     {/if}
-                  </div>
-                  <ul
-                     tabindex="0"
-                     class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box"
-                  >
-                     <li><a on:click={() => setLang("en")}>🇺🇸</a></li>
-                     <li><a on:click={() => setLang("fr")}>🇫🇷</a></li>
-                  </ul>
-               </div>
 
                <button
                   class="mr-4 btn btn-square btn-ghost"
@@ -102,10 +78,3 @@
       </div>
    {/if}
 </div>
-
-<style>
-   .dropdown-content {
-      backdrop-filter: blur(5px);
-      background: rgba(255, 255, 255, 0.2);
-   }
-</style>
