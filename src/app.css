@@ -6,9 +6,11 @@
 
 /* custom */
 
+@import url('./styles/fonts.css');
+
 @font-face {
    font-family: 'Adieu';
-   src: url('./fonts/Adieu.otf') format('opentype');
+   src: url('./styles/assets/fonts/Adieu.otf') format('opentype');
    font-weight: normal;
    font-style: normal;
 }
