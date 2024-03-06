@@ -47,7 +47,11 @@
                <DownloadUrl record={item} file={item.cover} let:link>
                   <img src={link} alt={item.id} />
                </DownloadUrl>
-               <span class="text-gray-500">{item.title}</span>
+
+               <div class="flex flex-col gap-0">
+                  <span class="text-gray-500">{item.title}</span>
+                  <span class="text-gray-500">@{item.company}</span>
+               </div>
             </div>
          {/each}
       </div>
